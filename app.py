@@ -1,6 +1,12 @@
 import streamlit as st
 import PyPDF2
 import matplotlib.pyplot as plt
+import google.generativeai as genai
+import streamlit as st
+
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+model = genai.GenerativeModel("gemini-pro")
+
 
 # Load CSS
 def load_css():
